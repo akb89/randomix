@@ -30,7 +30,7 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Install dependencies
       run: |
-        python setup.py -q install
+        python -m pip install --upgrade pip
         pip install pylint pydocstyle pycodestyle
 
     # Runs a set of commands using the runners shell
