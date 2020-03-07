@@ -35,7 +35,7 @@ def _generate_model(vocab, rtype, dim, normloc=None, normscale=None):
     if rtype == 'uniform':
         return np.random.uniform(-1, 1, [len(vocab), dim])
     if rtype == 'normal':
-        if not normloc or not normscale:
+        if normloc is None or normscale is None:
             raise Exception('Unspecified normloc/normscale parameters')
         distrib = get_truncated_normal(mean=normloc, sd=normscale, low=-1,
                                        upp=1)
@@ -72,8 +72,8 @@ def restricted_normloc(x):  # pylint: disable=invalid-name
 
 
 def main():
-    """Launch entropix."""
-    parser = argparse.ArgumentParser(prog='entropix')
+    """Launch randomix."""
+    parser = argparse.ArgumentParser(prog='randomix')
     subparsers = parser.add_subparsers()
     parser_generate = subparsers.add_parser(
         'generate', formatter_class=argparse.RawTextHelpFormatter,

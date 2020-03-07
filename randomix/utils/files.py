@@ -11,7 +11,7 @@ def get_output_filepath(vocab_dirpath, rtype, dim, normloc=None,
         raise Exception('Unsupported rtype: {}'.format(type))
     otp_fp = os.path.join(vocab_dirpath, 'rand-d{}-{}'.format(dim, rtype))
     if rtype == 'normal':
-        if not normloc or not normscale:
+        if normloc is None or normscale is None:
             raise Exception('Unspecified normloc/normscale parameters')
         otp_fp = '{}-m{}-s{}'.format(otp_fp, normloc, normscale)
     return '{}.txt'.format(otp_fp)
