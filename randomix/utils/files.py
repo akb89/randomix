@@ -14,4 +14,4 @@ def get_output_filepath(vocab_dirpath, rtype, dim, normloc=None,
         if normloc is None or normscale is None:
             raise Exception('Unspecified normloc/normscale parameters')
         otp_fp = '{}-m{}-s{}'.format(otp_fp, normloc, normscale)
-    return '{}.txt'.format(otp_fp)
+    return otp_fp
