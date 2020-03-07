@@ -51,8 +51,7 @@ def _generate(args):
     output_filepath = futils.get_output_filepath(
         vocab_dirpath, args.rtype, args.dim, args.normloc, args.normscale)
     if 'text' in args.output:
-        output_filepath = '{}.txt'.format(output_filepath)
-        embeddix.save_to_text(vocab, model, output_filepath)
+        embeddix.save_to_text(vocab, model, '{}.txt'.format(output_filepath))
     if 'numpy' in args.output:
         embeddix.save_to_numpy(vocab, model, output_filepath)
 
