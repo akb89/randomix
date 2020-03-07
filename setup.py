@@ -23,7 +23,7 @@ setup(
     keywords=['word embeddings', 'random', 'hack'],
     platforms=['any'],
     packages=['randomix', 'randomix.logging', 'randomix.exceptions',
-              'randomix.utils', 'randomix.core'],
+              'randomix.utils'],
     package_data={'randomix': ['logging/*.yml', 'resources/*']},
     include_package_data=True,
     entry_points={
@@ -31,7 +31,8 @@ setup(
             'randomix = randomix.main:main'
         ],
     },
-    install_requires=['pyyaml>=4.2b1'],
+    install_requires=['pyyaml>=4.2b1', 'embeddix==0.1.0', 'scipy==1.4.1',
+                      'numpy==1.18.1'],
     classifiers=['Development Status :: 2 - Pre-Alpha',
                  'Environment :: Web Environment',
                  'Intended Audience :: Developers',
