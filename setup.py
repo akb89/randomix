@@ -31,7 +31,7 @@ setup(
             'randomix = randomix.main:main'
         ],
     },
-    install_requires=['pyyaml>=4.2b1', 'embeddix==0.1.0', 'scipy==1.4.1',
+    install_requires=['pyyaml>=4.2b1', 'embeddix==0.1.0', 'scipy==1.10.0',
                       'numpy==1.14.5'],
     classifiers=['Development Status :: 2 - Pre-Alpha',
                  'Environment :: Web Environment',
